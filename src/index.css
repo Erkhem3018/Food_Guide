@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+:root {
+  --background: #FAFAF8;
+  --foreground: #1A1714;
+  --card: #FFFFFF;
+  --card-foreground: #1A1714;
+  --primary: #F25C2B;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F5F0EB;
+  --secondary-foreground: #4A3F38;
+  --muted: #F0EBE4;
+  --muted-foreground: #8C7B70;
+  --accent: #F25C2B;
+  --accent-foreground: #FFFFFF;
+  --border: #E8E0D8;
+  --ring: #F25C2B;
+  --radius: 16px;
+  --success: #22C55E;
+  --warning: #F59E0B;
+}
+
+* {
+  font-family: 'Nunito', system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overscroll-behavior: none;
+}
+
+.font-display {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+/* Hide scrollbars by default */
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+.scroll-show::-webkit-scrollbar { display: block; width: 4px; }
+.scroll-show { scrollbar-width: thin; }
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --radius-DEFAULT: var(--radius);
+}
+
+.animate-pulse-slow {
+  animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes float-up {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-float-up {
+  animation: float-up 0.35s ease both;
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}

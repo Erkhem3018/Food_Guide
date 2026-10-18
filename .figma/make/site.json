@@ -1,0 +1,11 @@
+{
+  "description": "Tell Mise what ingredients and kitchen tools you have, and it shows you meals you can actually make — with step-by-step cooking mode, smart substitutions and weekly meal plans.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  },
+  "title": "Mise — What can I cook today?"
+}
