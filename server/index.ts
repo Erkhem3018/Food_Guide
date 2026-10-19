@@ -72,7 +72,8 @@ const requireUser = async (c: Context<Env>, next: () => Promise<void>) => {
   await next();
 };
 
-app.get("/health", (c) => c.json({ ok: true }));
+// `commit` shows which git commit is live (set by Railway for GitHub deploys).
+app.get("/health", (c) => c.json({ ok: true, commit: process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 7) ?? null }));
 
 // ── Accounts ──────────────────────────────────────────────────────────────────
 app.post("/auth/signup", async (c) => {
